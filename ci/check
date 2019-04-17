@@ -1,0 +1,106 @@
+#!/bin/bash
+# Authors: Dylan Rogers, Krerkkiat Chusap
+
+#Directory variables for temporary files used in testing
+APOLLO_ROOT='../apollo-source-code'
+DIFFERENCES_ROOT='./Apollo/auto/Differences'
+ARCHIVE_ROOT='./Apollo/auto/Archive'
+
+DIFF_RES="${DIFFERENCES_ROOT}/current_differences.txt"
+OLD="${ARCHIVE_ROOT}/previous_test.txt"
+TEST="${ARCHIVE_ROOT}/new_test.txt"
+
+#Variable for cleaning
+DELETE="rm -r"
+
+#Variable for archiving files under current date+time
+#The date+time format is Month_Day_Year_Hour_Minute
+DATE="$(date +"%m_%d_%Y_%H_%M").txt"
+
+#String values for what is searched for using grep
+declare -a SEARCH_VALUES=("writer_->Write" "fprintf" "cv::imwrite" "cv::imencode" "ofstream")
+
+#Functions used by script
+#Searches Apollo source using grep
+Search(){
+	grep -I -s -r "$1" $APOLLO_ROOT >> $TEST
+}
+
+#Save differences file with date+time filename format
+ChangesFound(){
+	mv "$DIFF_RES" "$DIFFERENCES_ROOT/$DATE"
+}
+
+#Prints to the file what is being searched
+Print(){
+	printf "\nResults for $1: \n" >> $TEST
+}
+
+
+
+# Prepare output repository.
+git clone analysis-result new-result
+cd new-result
+
+git config --global user.email "nobody@concourse-ci.org"
+git config --global user.name "Concourse"
+
+#
+# Make some changes.
+#
+
+#Checks if the Archive folder exists
+#Creates the folder if not
+if [ ! -d $ARCHIVE_ROOT ]
+then
+	mkdir $ARCHIVE_ROOT
+fi
+
+#Checks if the Differences folder exists
+#Creates the folder if not
+if [ ! -d $DIFFERENCES_ROOT ]
+then
+	mkdir $DIFFERENCES_ROOT
+fi
+
+#Lets the user know search has begun
+echo "Searching..."
+
+#Loops through each string in SEARCH_VALUES
+#Calls the Print and Search function for each value
+for goal in ${SEARCH_VALUES}
+do
+  Print $goal
+  Search $goal
+done
+
+#Lets the user know the search is done and differences are being checked
+echo "Done!"
+echo "Checking Differences"
+
+#checks the differences between the previous test and this one
+diff $TEST $OLD >> $DIFF_RES
+
+#Checks if the diff check found any differences in the two searches
+if [ -s $DIFF_RES ]
+then
+	echo "Changes found"
+	ChangesFound
+else
+	#Deletes the empty differences file if none were found
+	echo "Changes not found"
+	$DELETE $DIFF_RES
+fi
+
+#Deletes previous test file
+$DELETE $OLD
+
+#Creates new previous test file for next check
+mv "$TEST" "$ARCHIVE_ROOT/$DATE"
+cp "$ARCHIVE_ROOT/$DATE" "$ARCHIVE_ROOT/previous_test.txt"
+
+#
+# Add and commit changes.
+#
+git add ./
+git commit -m "Perform analysis."

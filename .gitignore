@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Credential for CI/CD
+ci/credentials.yml
