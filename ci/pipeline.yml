@@ -1,6 +1,6 @@
 ---
 jobs:
-- name: grep-analysis
+- name: basic-privacy-analysis
   serial: true
   on_failure:
     # Push the commit up anyway.
@@ -15,8 +15,8 @@ jobs:
   - task: check
     file: analysis-result/ci/check-task.yml
     on_success:
-      task: commit-with-success-message
-      file: analysis-result/ci/commit-with-success-message-task.yml
+      task: commit-with-successful-message
+      file: analysis-result/ci/commit-with-successful-message-task.yml
     on_failure:
       task: commit-with-failure-message
       file: analysis-result/ci/commit-with-failure-message-task.yml

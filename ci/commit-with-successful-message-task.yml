@@ -12,4 +12,4 @@ outputs:
 - name: new-result
 
 run:
-  path: "./analysis-result/ci/commit-with-success-message"
+  path: "./analysis-result/ci/commit-with-successful-message"

@@ -83,15 +83,25 @@ if [ -s $DIFF_RES ]
 then
 	echo "Changes found"
 	ChangesFound
+
+  #Deletes previous test file
+  $DELETE $OLD
+
+  #Creates new previous test file for next check
+  mv "$TEST" "$ARCHIVE_ROOT/$DATE"
+  cp "$ARCHIVE_ROOT/$DATE" "$ARCHIVE_ROOT/previous_test.txt"
+
+  # Exit with error.
+  exit 1
 else
 	#Deletes the empty differences file if none were found
 	echo "Changes not found"
 	$DELETE $DIFF_RES
+
+  #Deletes previous test file
+  $DELETE $OLD
+
+  #Creates new previous test file for next check
+  mv "$TEST" "$ARCHIVE_ROOT/$DATE"
+  cp "$ARCHIVE_ROOT/$DATE" "$ARCHIVE_ROOT/previous_test.txt"
 fi
-
-#Deletes previous test file
-$DELETE $OLD
-
-#Creates new previous test file for next check
-mv "$TEST" "$ARCHIVE_ROOT/$DATE"
-cp "$ARCHIVE_ROOT/$DATE" "$ARCHIVE_ROOT/previous_test.txt"
