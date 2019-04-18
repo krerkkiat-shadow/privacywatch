@@ -65,7 +65,7 @@ echo "Searching..."
 
 #Loops through each string in SEARCH_VALUES
 #Calls the Print and Search function for each value
-for goal in ${SEARCH_VALUES}
+for goal in ${SEARCH_VALUES[@]}
 do
   Print $goal
   Search $goal
