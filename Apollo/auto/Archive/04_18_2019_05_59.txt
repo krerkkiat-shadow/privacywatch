@@ -93,3 +93,209 @@ Results for writer_->Write:
 ../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service.cc:  routing_request_writer_->Write(routing_request);
 ../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service_test.cc:  control_writer_->Write(control_command);
 ../apollo-source-code/docs/cyber/CyberRT_API_for_Developers.md:  driver_writer_->Write(out_msg);
+
+Results for fprintf: 
+../apollo-source-code/cyber/logger/log_file_object.cc:        fprintf(stderr, "COULD NOT CREATE A LOGGINGFILE %s!",
+../apollo-source-code/modules/control/controller/lon_controller.cc:      fprintf(speed_log_file_,
+../apollo-source-code/modules/control/controller/lon_controller.cc:    fprintf(speed_log_file_,
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/location_exporter.cc:  fprintf(gnss_loc_file_handle_,
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/location_exporter.cc:  fprintf(lidar_loc_file_handle_,
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/location_exporter.cc:  fprintf(fusion_loc_file_handle_,
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/location_exporter.cc:  fprintf(odometry_loc_file_handle_,
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/pcd_exporter.cc:  fprintf(stamp_file_handle_, "%u %lf\n", index, timestamp);
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "\n\nVeldoyne %uE\n", CAR_SENSOR_LASER_NUMBER);
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map coordinate type: %s\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    //     fprintf(file, "Map origin longitude: %lf\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    //     loss_less_config._origin_longitude); fprintf(file, "Map origin
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map compression: %d\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map resolution: ");
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:      fprintf(file, "%lf, ", loss_less_config.map_resolutions_[i]);
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "\nMap size: %lf %lf %lf %lf\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map node size: %d x %d\n", loss_less_config.map_node_size_x_,
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map row x col: \n");
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:      fprintf(file, "%u x %u, ",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map image max intensity: %lf\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "Map image max var: %lf\n",
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:    fprintf(file, "PCD folders: \n");
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/lossless_map_creator.cc:      fprintf(file, "%s\n", pcd_folder_pathes[trial].c_str());
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  vfprintf(stderr, format, ap);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:      fprintf(fp, " %*.*f", p, q, A[i + j * n]);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp, "\n");
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(stderr, "reference position file open error : %s\n", file);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    vfprintf(stderr, format, ap);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "%d ", level);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  vfprintf(fp_trace, format, ap);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "%d %9.3f: ", level, (tickget() - tick_trace) / 1000.0);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  vfprintf(fp_trace, format, ap);
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp_trace,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp_trace, "(%3d) %-3s : %s %s %3d %3d %02x\n", i + 1, id, s1, s2,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "(ion) %9.4e %9.4e %9.4e %9.4e\n", nav->ion_gps[0],
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "(ion) %9.4e %9.4e %9.4e %9.4e\n", nav->ion_gps[4],
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "(ion) %9.4e %9.4e %9.4e %9.4e\n", nav->ion_gal[0],
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp_trace, "(%3d) %-3s : %s %s %2d %2d %8.3f\n", i + 1, id, s1, s2,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp_trace, "(%3d) %-3s : %s %s %2d %2d\n", i + 1, id, s1, s2,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:      fprintf(
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:      fprintf(fp_trace, "%-3s %d %-3s %13.3f %6.3f\n", s, nav->pclk[i].index,
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:    fprintf(fp_trace, "%02X%s", *p++, i % 8 == 7 ? " " : "");
+../apollo-source-code/modules/drivers/gnss/third_party/rtkcmn.c:  fprintf(fp_trace, "\n");
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    fprintf(stderr,
+../apollo-source-code/modules/perception/camera/tools/obstacle_detection/obstacle_detection.cc:      fprintf(fp,
+../apollo-source-code/modules/perception/camera/tools/obstacle_detection/obstacle_detection.cc:        fprintf(stderr,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  fprintf(file_save, "[\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "{\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"type\":%d,\n", lane_objects[j].type);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"pos_type\":%d,\n", lane_objects[j].pos_type);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"camera_curve\":\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "{\"a\":%.10f,\"b\":%.10f,\"c\":%.10f,\"d\":%.10f,",
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"x0\":%.10f,\"x1\":%.10f},\n", curve_camera.x_start,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"camera_point_set\":\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "[");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f,\"z\":%.4f},",
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f,\"z\":%.4f}",
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "],");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"image_curve\":\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "{\"a\":%.10f,\"b\":%.10f,\"c\":%.10f,\"d\":%.10f,",
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"x0\":%.10f,\"x1\":%.10f},\n", curve_img.x_start,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\"image_point_set\":\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "[");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f},", image_point_set[k].x,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f}", image_point_set[k].x,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "]");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:      fprintf(file_save, "},\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:      fprintf(file_save, "}\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  fprintf(file_save, "]\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  fprintf(file_save, "lane_line_num=%d\n", lane_line_size);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "type=%d\n", lane_objects[j].type);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "pos_type=%d\n", lane_objects[j].pos_type);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "camera_curve:\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "a=%f b=%f c=%f d=%f x0=%f x1=%f\n", curve_camera.a,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "image_curve:\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "a=%f b=%f c=%f d=%f x0=%f x1=%f\n", curve_img.a,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "confidence=%f\n", lane_objects[j].confidence);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "curve_image_point_set:\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:      fprintf(file_save, "[%f %f] ", curve_image_point_set[k].x,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "curve_camera_point_set:\n");
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:      fprintf(file_save, "[%f %f %f] ", curve_camera_point_set[k].x,
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  fprintf(file_save, "[\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "{\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"type\":%d,\n", lane_objects[j].type);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"pos_type\":%d,\n", lane_objects[j].pos_type);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"camera_curve\":\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "{\"a\":%.10f,\"b\":%.10f,\"c\":%.10f,\"d\":%.10f,",
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"x0\":%.10f,\"x1\":%.10f},\n", curve_camera.x_start,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"camera_point_set\":\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "[");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f,\"z\":%.4f},",
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f,\"z\":%.4f}",
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "],");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"image_curve\":\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "{\"a\":%.10f,\"b\":%.10f,\"c\":%.10f,\"d\":%.10f,",
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"x0\":%.10f,\"x1\":%.10f},\n", curve_img.x_start,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\"image_point_set\":\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "[");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f},", image_point_set[k].x,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:        fprintf(file_save, "{\"x\":%.4f,\"y\":%.4f}", image_point_set[k].x,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "]");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:    fprintf(file_save, "\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:      fprintf(file_save, "},\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:      fprintf(file_save, "}\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  fprintf(file_save, "]\n");
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  fprintf(file_save, "camera_ground_height:\t%f\n", camera_ground_height);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  fprintf(file_save, "pitch_angle:\t%f\n", pitch_angle);
+../apollo-source-code/modules/perception/base/common.h:    fprintf(stderr, "GPUassert: %s %s %d\n", cudaGetErrorString(code), file,
+
+Results for cv::imwrite: 
+../apollo-source-code/modules/localization/msf/local_map/base_map/base_map_node.cc:  bool success = cv::imwrite(path, image);
+../apollo-source-code/modules/localization/msf/local_tool/local_visualization/engine/visualization_engine.cc:    cv::imwrite(p + "_0.png", tmp);
+../apollo-source-code/modules/localization/msf/local_tool/local_visualization/engine/visualization_engine.cc:          cv::imwrite(ss, small);
+../apollo-source-code/modules/perception/inference/tools/lane_sample.cc:        cv::imwrite("res.jpg", img);
+../apollo-source-code/modules/perception/lidar/lib/segmentation/cnnseg/feature_generator_test.cc:    cv::imwrite("cpu_top_intensity_map.jpg", image);
+../apollo-source-code/modules/perception/lidar/lib/segmentation/cnnseg/feature_generator_test.cc:    cv::imwrite("gpu_top_intensity_map.jpg", image);
+../apollo-source-code/modules/perception/onboard/component/trafficlights_perception_component.cc:  cv::imwrite("/apollo/debug_vis/" + std::to_string(frame.timestamp) + ".jpg",
+../apollo-source-code/modules/perception/camera/test/camera_lib_calibrator_laneline_laneline_calibrator_test.cc:      cv::imwrite(save_name, test_image_half_result);
+../apollo-source-code/modules/perception/camera/test/camera_common_io_util.h:  cv::imwrite(path, cv_img);
+../apollo-source-code/modules/perception/camera/test/camera_common_io_util.h:  cv::imwrite(path, cv_img);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_tracker_omt_omt_obstacle_tracker_test.cc:  cv::imwrite(out_path, image_mat_src);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:  cv::imwrite("output.jpg", cv_img);
+../apollo-source-code/modules/perception/camera/test/camera_common_undistortion_handler_test.cc:      cv::imwrite("undistorted_old.jpg", in_image);
+../apollo-source-code/modules/perception/camera/tools/offline/offline_obstacle_pipeline.cc:  cv::imwrite(path, cv_img);
+../apollo-source-code/modules/perception/camera/tools/offline/offline_obstacle_pipeline.cc:      cv::imwrite(save_dir + "/" + image_name + FLAGS_image_ext, image);
+../apollo-source-code/modules/perception/camera/tools/offline/visualizer.cc:      cv::imwrite(path, bigimg);
+../apollo-source-code/modules/perception/camera/tools/offline/visualizer.cc:    cv::imwrite(path, bigimg);
+../apollo-source-code/modules/perception/camera/tools/obstacle_detection/obstacle_detection.cc:      cv::imwrite(vis_path.c_str(), cv_img);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, lane_draw);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+../apollo-source-code/modules/perception/camera/tools/lane_detection/lane_common.cc:  cv::imwrite(save_path, draw_mat);
+
+Results for cv::imencode: 
+../apollo-source-code/modules/drivers/camera/compress_component.cc:    if (!cv::imencode(".jpg", tmp_mat, compress_buffer, params)) {
+../apollo-source-code/modules/drivers/camera/compress_component.cc:      AERROR << "cv::imencode (jpeg) failed on input image";
+../apollo-source-code/modules/drivers/camera/compress_component.cc:    AERROR << "cv::imencode (jpeg) exception :" << e.what();
+../apollo-source-code/modules/dreamview/backend/handlers/image_handler.cc:  cv::imencode(".jpg", mat, send_buffer_, std::vector<int>() /* params */);
+../apollo-source-code/modules/dreamview/backend/handlers/image_handler.cc:  cv::imencode(".jpg", mat_image, send_buffer_,
+
+Results for ofstream: 
+../apollo-source-code/cyber/event/perf_event_cache.h:  std::ofstream of_;
+../apollo-source-code/cyber/common/file.cc:  std::ofstream dst(to, std::ios::binary);
+../apollo-source-code/modules/planning/reference_line/spiral_smoother_util.cc:    std::ofstream ofs(filename.c_str());
+../apollo-source-code/modules/planning/reference_line/smoother_util.cc:    std::ofstream ofs(filename.c_str());
+../apollo-source-code/modules/control/controller/lat_controller.h:  std::ofstream steer_log_file_;
+../apollo-source-code/modules/control/controller/mpc_controller.h:  std::ofstream mpc_log_file_;
+../apollo-source-code/modules/control/controller/lat_controller.cc:void WriteHeaders(std::ofstream &file_stream) {
+../apollo-source-code/modules/control/controller/mpc_controller.cc:void WriteHeaders(std::ofstream &file_stream) {}
+../apollo-source-code/modules/map/tools/sim_map_generator.cc:  std::ofstream map_txt_file(FLAGS_output_dir + "/sim_map.txt");
+../apollo-source-code/modules/map/tools/sim_map_generator.cc:  std::ofstream map_bin_file(FLAGS_output_dir + "/sim_map.bin");
+../apollo-source-code/modules/localization/msf/local_tool/data_extraction/compare_poses.cc:  std::ofstream file(compare_file.c_str());
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/poses_interpolation/poses_interpolation.cc:  std::ofstream fout;
+../apollo-source-code/modules/localization/msf/local_tool/map_creation/poses_interpolation/poses_interpolation.cc:  fout.open(out_poses_path_.c_str(), std::ofstream::out);
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:  gpsbin_stream_.reset(new std::ofstream(
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.h:  std::unique_ptr<std::ofstream> gpsbin_stream_ = nullptr;
+../apollo-source-code/modules/drivers/video/video_driver_component.cc:  std::ofstream fout;
+../apollo-source-code/modules/drivers/velodyne/parser/util.h:  // std::ofstream ofs(file_path.c_str(),
+../apollo-source-code/modules/drivers/velodyne/parser/util.h:  //                   std::ofstream::out | std::ofstream::binary);
+../apollo-source-code/modules/drivers/velodyne/parser/online_calibration.cc:  std::ofstream ofs(file_path.c_str(), std::ios::out);
+../apollo-source-code/modules/drivers/velodyne/parser/calibration.cc:  std::ofstream fout(calibration_file.c_str());
+../apollo-source-code/modules/routing/tools/routing_dump.cc:    std::ofstream dump_file(FLAGS_routing_dump_file);
+../apollo-source-code/modules/perception/inference/utils/util.cc:  std::ofstream outf(out_path, std::ios::binary | std::ios::out);
+../apollo-source-code/modules/perception/inference/tools/cal_table_generator.cc:  std::ofstream out_car(out_file, std::ofstream::out | std::ofstream::binary);
+../apollo-source-code/modules/perception/inference/tools/cal_table_generator.cc:  // std::ofstream out_car(out_file, std::ofstream::out);
+../apollo-source-code/modules/perception/inference/tools/cal_table_generator.cc:      out_car.open(out_file, std::ofstream::out | std::ofstream::binary);
+../apollo-source-code/modules/perception/inference/tensorrt/entropy_calibrator.h:    std::ofstream output(
+../apollo-source-code/modules/perception/lidar/lib/segmentation/cnnseg/feature_generator_test.cc:    std::ofstream ofs("cpu_top_intensity_map.txt");
+../apollo-source-code/modules/perception/lidar/lib/segmentation/cnnseg/feature_generator_test.cc:    std::ofstream ofs("gpu_top_intensity_map.txt");
+../apollo-source-code/modules/perception/lidar/tools/offline_lidar_obstacle_perception.cc:    std::ofstream fout(path);
+../apollo-source-code/modules/perception/camera/lib/calibrator/common/histogram_estimator.cc://   std::ofstream fout;
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/test/camera_lib_obstacle_detector_yolo_yolo_obstacle_detector_test.cc:    std::ofstream ofs(config_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/tools/offline/offline_obstacle_pipeline.cc:      std::ofstream myfile;
+../apollo-source-code/modules/perception/camera/tools/offline/visualizer.cc:  std::ofstream y_file(yaml_file);
+../apollo-source-code/modules/perception/camera/app/obstacle_camera_perception.cc:                      std::ofstream::out);
+../apollo-source-code/modules/perception/camera/app/obstacle_camera_perception.cc:                     std::ofstream::out);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:void WriteCamera2World(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:void WriteTracking(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  std::ofstream outf(out_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:  std::ofstream outf(out_path, std::ofstream::out);
+../apollo-source-code/modules/perception/camera/app/debug_info.cc:void WriteFusionTracking(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/perception/camera/app/obstacle_camera_perception.h:  std::ofstream out_track_;
+../apollo-source-code/modules/perception/camera/app/obstacle_camera_perception.h:  std::ofstream out_pose_;
+../apollo-source-code/modules/perception/camera/app/debug_info.h:void WriteCamera2World(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/perception/camera/app/debug_info.h:void WriteTracking(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/perception/camera/app/debug_info.h:void WriteFusionTracking(std::ofstream &fout, int frame_num,
+../apollo-source-code/modules/dreamview/backend/hmi/hmi_worker.cc:    std::ofstream fout(kGlobalFlagfile, std::ios_base::app);
