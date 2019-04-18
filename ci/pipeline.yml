@@ -1,6 +1,12 @@
+---
 jobs:
 - name: grep-analysis
   serial: true
+  on_failure:
+    # Push the commit up anyway.
+    put: analysis-result
+    params:
+      repository: new-result
   plan:
   - get: apollo-source-code
     trigger: true
@@ -8,6 +14,12 @@ jobs:
     trigger: false
   - task: check
     file: analysis-result/ci/check-task.yml
+    on_success:
+      task: commit-with-success-message
+      file: analysis-result/ci/commit-with-success-message.yml
+    on_failure:
+      task: commit-with-failure-message
+      file: analysis-result/ci/commit-with-failure-message.yml
   - put: analysis-result
     params:
       repository: new-result
@@ -22,7 +34,7 @@ resources:
 - name: analysis-result
   type: git
   source:
-    uri: git@github.com:drchangliu/privacywatch.git
+    uri: git@github.com:krerkkiat-shadow/privacywatch.git
     branch: master
     private_key: ((git-private-key))
     username: ((git-username))

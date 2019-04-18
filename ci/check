@@ -98,9 +98,3 @@ $DELETE $OLD
 #Creates new previous test file for next check
 mv "$TEST" "$ARCHIVE_ROOT/$DATE"
 cp "$ARCHIVE_ROOT/$DATE" "$ARCHIVE_ROOT/previous_test.txt"
-
-#
-# Add and commit changes.
-#
-git add ./
-git commit -m "Perform analysis."

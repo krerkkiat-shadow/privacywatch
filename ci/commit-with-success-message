@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd new-result
+
+#
+# Add and commit changes.
+#
+git add ./
+git commit -m "Perform analysis (success)."
