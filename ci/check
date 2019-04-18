@@ -18,7 +18,7 @@ DELETE="rm -r"
 DATE="$(date +"%m_%d_%Y_%H_%M").txt"
 
 #String values for what is searched for using grep
-declare -a SEARCH_VALUES=("writer_->Write" "fprintf" "cv::imwrite" "cv::imencode" "ofstream")
+declare -a SEARCH_VALUES=("writer_->Write" "fprintf" "cv::imwrite" "ofstream")
 
 #Functions used by script
 #Searches Apollo source using grep
