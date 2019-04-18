@@ -5,10 +5,11 @@ image_resource:
   source: {repository: krerkkiat/analysis-image}
 
 inputs:
+- name: analysis-result
 - name: new-result
 
 outputs:
 - name: new-result
 
 run:
-  path: "./analysis-result/ci/commit-with-success-message"
+  path: "./analysis-result/ci/commit-with-failure-message"

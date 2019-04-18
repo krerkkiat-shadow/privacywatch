@@ -16,10 +16,10 @@ jobs:
     file: analysis-result/ci/check-task.yml
     on_success:
       task: commit-with-success-message
-      file: analysis-result/ci/commit-with-success-message.yml
+      file: analysis-result/ci/commit-with-success-message-task.yml
     on_failure:
       task: commit-with-failure-message
-      file: analysis-result/ci/commit-with-failure-message.yml
+      file: analysis-result/ci/commit-with-failure-message-task.yml
   - put: analysis-result
     params:
       repository: new-result
