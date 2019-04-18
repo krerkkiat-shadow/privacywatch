@@ -8,4 +8,4 @@ cd new-result
 # Add and commit changes.
 #
 git add ./
-git commit -m "Perform analysis (fail)." -m "Important changes" -m $(cat diff-result)
+git commit -m "Perform analysis (fail)." -m "Important changes" -m $(cat ../diff-result)
