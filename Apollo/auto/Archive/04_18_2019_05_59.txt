@@ -1,0 +1,95 @@
+
+Results for writer_->Write: 
+../apollo-source-code/cyber/examples/timer_component_example/timer_component_example.cc:  driver_writer_->Write(out_msg);
+../apollo-source-code/cyber/tools/cyber_recorder/player/play_task.cc:  if (!writer_->Write(msg_)) {
+../apollo-source-code/cyber/tools/cyber_recorder/recorder.cc:    if (!writer_->WriteChannel(role_attr.channel_name(),
+../apollo-source-code/cyber/tools/cyber_recorder/recorder.cc:  if (!writer_->WriteMessage(channel_name, message, message_time_)) {
+../apollo-source-code/cyber/py_wrapper/py_node.h:    return writer_->Write(message);
+../apollo-source-code/cyber/record/record_writer.cc:  file_writer_->WriteHeader(header_);
+../apollo-source-code/cyber/record/record_writer.cc:  if (!file_writer_->WriteHeader(header_)) {
+../apollo-source-code/cyber/record/record_writer.cc:    if (!file_writer_->WriteChannel(channel)) {
+../apollo-source-code/cyber/record/record_writer.cc:    if (!file_writer_->WriteChannel(channel)) {
+../apollo-source-code/cyber/record/record_writer.cc:  if (!file_writer_->WriteMessage(message)) {
+../apollo-source-code/modules/canbus/canbus_component.cc:  chassis_writer_->Write(std::make_shared<Chassis>(chassis));
+../apollo-source-code/modules/canbus/canbus_component.cc:  chassis_detail_writer_->Write(
+../apollo-source-code/modules/canbus/tools/teleop.cc:    control_command_writer_->Write(
+../apollo-source-code/modules/canbus/tools/canbus_tester.cc:    control_command_writer_->Write(
+../apollo-source-code/modules/transform/static_transform_component.cc:  writer_->Write(std::make_shared<TransformStampeds>(transform_stampeds_));
+../apollo-source-code/modules/transform/transform_broadcaster.cc:  writer_->Write(message);
+../apollo-source-code/modules/planning/planning_component.cc:  planning_writer_->Write(std::make_shared<ADCTrajectory>(adc_trajectory_pb));
+../apollo-source-code/modules/planning/planning_component.cc:  rerouting_writer_->Write(
+../apollo-source-code/modules/planning/planning_component.cc:    planning_writer_->Write(std::make_shared<ADCTrajectory>(trajectory_pb));
+../apollo-source-code/modules/tools/manual_traffic_light/manual_traffic_light.cc:    traffic_light_detection_writer_->Write(traffic_light_detection);
+../apollo-source-code/modules/tools/prediction/fake_prediction/fake_prediction.cc:    prediction_writer_->Write(prediction);
+../apollo-source-code/modules/prediction/prediction_component.cc:  prediction_writer_->Write(
+../apollo-source-code/modules/v2x/v2x_proxy/obu_interface/grpc_interface/grpc_server.cc:    if (first_flag_writer_->Write(msg)) {
+../apollo-source-code/modules/control/control_component_test.cc:  planning_writer_->Write(trajectory_);
+../apollo-source-code/modules/control/control_component_test.cc:  chassis_writer_->Write(chassis_);
+../apollo-source-code/modules/control/control_component_test.cc:  localization_writer_->Write(localization_);
+../apollo-source-code/modules/control/control_component_test.cc:  chassis_writer_->Write(chassis_);
+../apollo-source-code/modules/control/control_component_test.cc:  pad_writer_->Write(pad_message_);
+../apollo-source-code/modules/control/tools/pad_terminal.cc:    pad_writer_->Write(std::make_shared<PadMessage>(pad));
+../apollo-source-code/modules/control/control_component.cc:  control_cmd_writer_->Write(std::make_shared<ControlCommand>(control_command));
+../apollo-source-code/modules/common/monitor_log/monitor_logger.cc:  monitor_msg_writer_->Write(std::make_shared<MonitorMessage>(*message));
+../apollo-source-code/modules/map/relative_map/relative_map_component.cc:  relative_map_writer_->Write(map_msg);
+../apollo-source-code/modules/drivers/gnss/parser/rtcm_parser.cc:  gnssephemeris_writer_->Write(eph);
+../apollo-source-code/modules/drivers/gnss/parser/rtcm_parser.cc:  epochobservation_writer_->Write(observation);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  insstatus_writer_->Write(std::make_shared<InsStatus>(ins_status_));
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  gnssstatus_writer_->Write(std::make_shared<GnssStatus>(gnss_status_));
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:    insstatus_writer_->Write(std::make_shared<InsStatus>(ins_status_));
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  gnssstatus_writer_->Write(std::make_shared<GnssStatus>(gnss_status_));
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  insstat_writer_->Write(ins_stat);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  gnssbestpose_writer_->Write(bestpos);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  rawimu_writer_->Write(raw_imu);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  gps_writer_->Write(gps);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  corrimu_writer_->Write(imu);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  gnssephemeris_writer_->Write(eph);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  epochobservation_writer_->Write(observation);
+../apollo-source-code/modules/drivers/gnss/parser/data_parser.cc:  heading_writer_->Write(heading);
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:  stream_writer_->Write(std::make_shared<StreamStatus>(stream_status_));
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:    stream_writer_->Write(std::make_shared<StreamStatus>(stream_status_));
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:  stream_writer_->Write(std::make_shared<StreamStatus>(stream_status_));
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:      raw_writer_->Write(msg_pub);
+../apollo-source-code/modules/drivers/gnss/stream/raw_stream.cc:  rtcm_writer_->Write(rtk_msg);
+../apollo-source-code/modules/drivers/tools/image_decompress/image_decompress.cc:  writer_->Write(image);
+../apollo-source-code/modules/drivers/radar/racobit_radar/racobit_radar_message_manager.cc:      writer_->Write(sensor_data_);
+../apollo-source-code/modules/drivers/radar/ultrasonic_radar/ultrasonic_radar_message_manager.cc:    ultrasonic_radar_writer_->Write(std::make_shared<Ultrasonic>(sensor_data_));
+../apollo-source-code/modules/drivers/radar/conti_radar/conti_radar_message_manager.cc:      conti_radar_writer_->Write(std::make_shared<ContiRadar>(sensor_data_));
+../apollo-source-code/modules/drivers/camera/compress_component.cc:    writer_->Write(compressed_image);
+../apollo-source-code/modules/drivers/camera/camera_component.cc:    writer_->Write(pb_image);
+../apollo-source-code/modules/drivers/video/video_driver_component.cc:      writer_->Write(pb_image_);
+../apollo-source-code/modules/drivers/velodyne/fusion/pri_sec_fusion_component.cc:  fusion_writer_->Write(target);
+../apollo-source-code/modules/drivers/velodyne/driver/velodyne_driver_component.cc:      writer_->Write(scan);
+../apollo-source-code/modules/drivers/velodyne/compensator/compensator_component.cc:    writer_->Write(point_cloud_compensated);
+../apollo-source-code/modules/drivers/velodyne/parser/velodyne_convert_component.cc:  writer_->Write(point_cloud_out);
+../apollo-source-code/modules/third_party_perception/third_party_perception_component.cc:  writer_->Write(response);
+../apollo-source-code/modules/routing/routing_component.cc:            this->response_history_writer_->Write(response);
+../apollo-source-code/modules/routing/routing_component.cc:  response_writer_->Write(response);
+../apollo-source-code/modules/guardian/guardian_component.cc:  guardian_writer_->Write(std::make_shared<GuardianCommand>(guardian_cmd_));
+../apollo-source-code/modules/perception/onboard/component/fusion_component.cc:      writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/fusion_component.cc:        inner_writer_->Write(viz_message);
+../apollo-source-code/modules/perception/onboard/component/trafficlights_perception_component.cc:  writer_->Write(out_msg);
+../apollo-source-code/modules/perception/onboard/component/trafficlights_perception_component.cc:  writer_->Write(out_msg);
+../apollo-source-code/modules/perception/onboard/component/segmentation_component.cc:    writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/recognition_component.cc:    writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/lane_detection_component.cc:  writer_->Write(lanes_msg);
+../apollo-source-code/modules/perception/onboard/component/fusion_camera_detection_component.cc:      writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/fusion_camera_detection_component.cc:  bool send_sensorframe_ret = sensorframe_writer_->Write(prefused_message);
+../apollo-source-code/modules/perception/onboard/component/fusion_camera_detection_component.cc:    writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/fusion_camera_detection_component.cc:    bool send_viz_ret = camera_viz_writer_->Write(viz_msg);
+../apollo-source-code/modules/perception/onboard/component/fusion_camera_detection_component.cc:    camera_debug_writer_->Write(camera_debug_msg);
+../apollo-source-code/modules/perception/onboard/component/lidar_output_component.cc:  writer_->Write(out_message);
+../apollo-source-code/modules/perception/onboard/component/radar_detection_component.cc:  writer_->Write(out_message);
+../apollo-source-code/modules/perception/camera/lib/motion_service/motion_service.cc:  writer_->Write(motion_service_msg);
+../apollo-source-code/modules/dreamview/backend/sim_control/sim_control.cc:  chassis_writer_->Write(chassis);
+../apollo-source-code/modules/dreamview/backend/sim_control/sim_control.cc:  localization_writer_->Write(localization);
+../apollo-source-code/modules/dreamview/backend/sim_control/sim_control.cc:  prediction_writer_->Write(prediction);
+../apollo-source-code/modules/dreamview/backend/hmi/hmi_worker.cc:        status_writer_->Write(*status);
+../apollo-source-code/modules/dreamview/backend/hmi/hmi_worker.cc:  drive_event_writer_->Write(drive_event);
+../apollo-source-code/modules/dreamview/backend/hmi/hmi_worker.cc:    pad_writer_->Write(pad);
+../apollo-source-code/modules/dreamview/backend/hmi/hmi_worker.cc:  audio_capture_writer_->Write(audio);
+../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service.cc:  routing_response_writer_->Write(routing_response);
+../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service.cc:  navigation_writer_->Write(navigation_info);
+../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service.cc:  routing_request_writer_->Write(routing_request);
+../apollo-source-code/modules/dreamview/backend/simulation_world/simulation_world_service_test.cc:  control_writer_->Write(control_command);
+../apollo-source-code/docs/cyber/CyberRT_API_for_Developers.md:  driver_writer_->Write(out_msg);
