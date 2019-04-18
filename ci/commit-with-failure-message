@@ -1,4 +1,6 @@
 #!/bin/bash
+git config --global user.email "nobody@concourse-ci.org"
+git config --global user.name "Concourse"
 
 cd new-result
 

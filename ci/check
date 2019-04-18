@@ -42,9 +42,6 @@ Print(){
 git clone analysis-result new-result
 cd new-result
 
-git config --global user.email "nobody@concourse-ci.org"
-git config --global user.name "Concourse"
-
 #
 # Make some changes.
 #
