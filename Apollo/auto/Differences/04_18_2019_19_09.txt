@@ -1,0 +1,8 @@
+240a241,247
+> Results for cv::imencode: 
+> ../apollo-source-code/modules/drivers/camera/compress_component.cc:    if (!cv::imencode(".jpg", tmp_mat, compress_buffer, params)) {
+> ../apollo-source-code/modules/drivers/camera/compress_component.cc:      AERROR << "cv::imencode (jpeg) failed on input image";
+> ../apollo-source-code/modules/drivers/camera/compress_component.cc:    AERROR << "cv::imencode (jpeg) exception :" << e.what();
+> ../apollo-source-code/modules/dreamview/backend/handlers/image_handler.cc:  cv::imencode(".jpg", mat, send_buffer_, std::vector<int>() /* params */);
+> ../apollo-source-code/modules/dreamview/backend/handlers/image_handler.cc:  cv::imencode(".jpg", mat_image, send_buffer_,
+> 
