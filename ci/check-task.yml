@@ -10,6 +10,7 @@ inputs:
 
 outputs:
 - name: new-result
+- name: diff-result
 
 run:
   path: "./analysis-result/ci/check"

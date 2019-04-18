@@ -82,6 +82,10 @@ diff $TEST $OLD >> $DIFF_RES
 if [ -s $DIFF_RES ]
 then
 	echo "Changes found"
+
+  # Exporting different file for another task.
+  cp "$DIFF_RES" ../diff-result
+
 	ChangesFound
 
   #Deletes previous test file
@@ -94,9 +98,10 @@ then
   # Exit with error.
   exit 1
 else
-	#Deletes the empty differences file if none were found
 	echo "Changes not found"
-	$DELETE $DIFF_RES
+
+  # Exporting different file for another task.
+  cp "$DIFF_RES" ../diff-result
 
   #Deletes previous test file
   $DELETE $OLD
